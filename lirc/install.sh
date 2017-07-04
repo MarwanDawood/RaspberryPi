@@ -9,8 +9,8 @@
 
 read -p "update the linux distro (y/n)?" choice
 if  [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
-apt-get upgrade
 apt-get update
+apt-get upgrade
 fi
 
 
@@ -81,4 +81,4 @@ mode2 -d /dev/lirc0
 fi #for installing the package
 #fi #for checking number of passed arguments
 
-echo "end of configuration.."
+echo "end of configuration"

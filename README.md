@@ -1,20 +1,20 @@
 # Raspberry Pi Projects
 
-## cheat sheet for [Markdown](https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html)
+cheat sheet for [Markdown](https://confluence.atlassian.com/bitbucketserver/markdown-syntax-guide-776639995.html)
 
 ## Git cheat sheet
->for getting lost commits
+>getting lost commits
 ```
 git reflog
 git checkout HEAD@{...}
 ```
 
->change commit before pushing
+>changing commit before pushing
 ```
 git commit --amend
 ```
 
->to remove file after add and before commit
+>removing file after add and before commit
 ```
 git reset <file>
 ```
