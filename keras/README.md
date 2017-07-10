@@ -4,7 +4,7 @@
 
 path of Keras installation is `~/Envs/keras_tf/`
 
-## running the installation scripts
+## running the installation scripts for CPU only
 modify first `CURRENT_USER` environment variable then run the following
 ```
 source install_part_1.sh
@@ -32,7 +32,7 @@ workon keras_tf
 ```
 
 - - - -
->solving failed apt-get update issue
+>solving failed `apt-get update` issue
 ```
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 ```
