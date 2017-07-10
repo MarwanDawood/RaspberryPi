@@ -1,20 +1,17 @@
 # Keras Tensorflow installation for Ubuntu 17.04 (Zesty Zapus)
 
-[Install Keras with Tensorlow complete guide](http://www.pyimagesearch.com/2016/11/14/installing-keras-with-tensorflow-backend/)
+[Install Keras with Tensorflow complete guide](http://www.pyimagesearch.com/2016/11/14/installing-keras-with-tensorflow-backend/)
 
->path of Keras installation is `~/Envs/keras_tf/`
+path of Keras installation is `~/Envs/keras_tf/`
 
 ## running the installation scripts
->at first, modify `CURRENT_USER` environment variable then run the following
+modify first `CURRENT_USER` environment variable then run the following
 ```
 source install_part_1.sh
 source install_part_2.sh
 ```
 
->after successful installation, try one of Keras examples
-```python ~/Envs/keras_tf/keras/examples/addition_rnn.py```
->if an error occurred, try reinstalling tensorflow again
-```pip install --upgrade tensorflow```
+>after successful installation, try one of Keras examples like `python ~/Envs/keras_tf/keras/examples/addition_rnn.py`, if an error occurred, then try reinstalling tensorflow again through the command `pip install --upgrade tensorflow`
 
 ## installing tensorflow GPU support in addition to CPU
 ```
@@ -36,5 +33,7 @@ workon keras_tf
 
 - - - -
 >solving failed apt-get update issue
-```echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null```
+```
+echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+```
 
