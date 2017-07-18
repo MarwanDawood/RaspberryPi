@@ -5,7 +5,7 @@ sudo apt-get update
 
 printf "\ninstalling keras and tensorflow dependencies\n"
 sudo apt-get install git-all
-sudo apt-get install python-pip python2.7-dev virtualenv
+sudo apt-get install python-pip python-dev virtualenv
 pip install --no-cache-dir virtualenvwrapper
 pip install -U pip setuptools
 
