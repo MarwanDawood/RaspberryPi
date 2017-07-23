@@ -1,3 +1,5 @@
+This project ran on PyCharm IDE with keras interpreter extension to support auto complete
+
 # Switching between different environments
 ```
 export WORKON_HOME=~/Envs
