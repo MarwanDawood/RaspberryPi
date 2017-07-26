@@ -12,8 +12,9 @@ class AndroidCamFeed:
     __feed = None
     __bytes = ''
     __noStreamCount = 1
-    __loadCode = cv2.IMREAD_COLOR if sys.version_info[0] > 2 \
-                                    else cv2.CV_LOAD_IMAGE_COLOR
+    #commented and replaced lines
+    #__loadCode = cv2.IMREAD_COLOR if sys.version_info[0] > 2 else cv2.CV_LOAD_IMAGE_COLOR
+    __loadCode = cv2.IMREAD_COLOR
     def __init__(self, host):
         self.hoststr = 'http://' + host + '/video'
         try:

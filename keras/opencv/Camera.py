@@ -23,32 +23,26 @@ def main():
     # While camera is open
     while cap.isOpened():
         ## Read frame
-        ret, img = cap.read()
+        ret, frame = cap.read()
         if ret:
 
 ## ADD YOUR CODE HERE!
+            hsv = cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
 
-            gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
-            faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+            lower_red = np.array([30,150,50])
+            upper_red = np.array([255,255,180])
 
-            # image, reject levels level weights.
-            watches = watch_cascade.detectMultiScale(gray, 50, 50)
+            mask = cv2.inRange(hsv, lower_red, upper_red)
+            res = cv2.bitwise_and(frame,frame, mask= mask)
 
-            for (x, y, w, h) in watches:
-                cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
+            laplacian = cv2.Laplacian(frame,cv2.CV_64F)
+            # x=1, y=0, convolution kernel is 5x5
+            sobelx = cv2.Sobel(frame,cv2.CV_64F,1,0,ksize=5)
+            # x=0, y=1, convolution kernel is 5x5
+            sobely = cv2.Sobel(frame,cv2.CV_64F,0,1,ksize=5)
 
-            for (x, y, w, h) in faces:
-                cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)
-                # used for image detection
-                roi_gray = gray[y:y + h, x:x + w]
-                # used to output the rectangle on the colored image
-                roi_color = img[y:y + h, x:x + w]
-
-                eyes = eye_cascade.detectMultiScale(roi_gray)
-                for (ex, ey, ew, eh) in eyes:
-                    cv2.rectangle(roi_color, (ex, ey), (ex + ew, ey + eh), (0, 255, 0), 2)
-
-
+            edges = cv2.Canny(frame,100,200)
+            cv2.imshow('Edges',edges)
 ## END OF YOUR CODE!
 
         # delay in 5 milliseconds

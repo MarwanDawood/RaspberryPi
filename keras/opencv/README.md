@@ -20,3 +20,7 @@ If you really do want to run the command overnight, but don't want to leave the 
 ```
 nohup opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 10 -w 20 -h 20 &
 ```
+If you want to cut down some stages or add stages to the final one you computed, just retype this command with the final total number of stages you need, here we want 11 stages, so we will compute only 1 extra stage
+```
+opencv_traincascade -data data -vec positives.vec -bg bg.txt -numPos 1800 -numNeg 900 -numStages 11 -w 20 -h 20
+```
