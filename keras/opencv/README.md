@@ -6,7 +6,7 @@
 3. Download the android application [IP Webcam](https://play.google.com/store/apps/details?id=com.pas.webcam&hl=en) and start it as a server
 4. Get the URL address and the port number and make a command like this
 ```
-python Camera.py.py 192.168.1.2:8080
+python Camera.py 192.168.1.2:8080
 ```
 - - - 
 # trining Haar vector to identify watch5050.jpg

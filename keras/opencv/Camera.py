@@ -6,6 +6,8 @@ from AndroidCamFeed import AndroidCamFeed
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 # https://github.com/Itseez/opencv/blob/master/data/haarcascades/haarcascade_eye.xml
 eye_cascade = cv2.CascadeClassifier('haarcascade_eye.xml')
+#this is the cascade we just made. Call what you want
+watch_cascade = cv2.CascadeClassifier('data/watch_cascade_10_stages.xml.xml')
 
 def main():
     if not sys.argv[1] or len(sys.argv) > 2:
@@ -21,14 +23,19 @@ def main():
     # While camera is open
     while cap.isOpened():
         ## Read frame
-        ret, frame = cap.read()
+        ret, img = cap.read()
         if ret:
 
 ## ADD YOUR CODE HERE!
 
-            ret, img = cap.read()
             gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             faces = face_cascade.detectMultiScale(gray, 1.3, 5)
+
+            # image, reject levels level weights.
+            watches = watch_cascade.detectMultiScale(gray, 50, 50)
+
+            for (x, y, w, h) in watches:
+                cv2.rectangle(img, (x, y), (x + w, y + h), (255, 255, 0), 2)
 
             for (x, y, w, h) in faces:
                 cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)

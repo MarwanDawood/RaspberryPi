@@ -4,9 +4,15 @@ This project ran on PyCharm IDE with keras interpreter extension to support auto
 ```
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
-workon keras_tf
+workon open_cv_3
 ```
-
+# Creating a new environment
+```
+export WORKON_HOME=~/Envs
+source /home/marwan/.local/bin/virtualenvwrapper.sh 
+mkvirtualenv open_cv_3
+workon open_cv_3
+```
 - - -
 
 # Keras Tensorflow installation for Ubuntu 17.04 (Zesty Zapus)
@@ -26,7 +32,7 @@ source keras_install_part_2.sh
 
 ## Running OpenCV installation scripts
 ```
-source opencv_install.sh
+source opencv_3.5_install.sh
 ```
 
 ## Installing tensorflow GPU support in addition to CPU
@@ -47,4 +53,17 @@ sudo apt-get install cuda
 ```
 echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
 ```
+>resizing swap file
+```
+#Make all swap off
+sudo swapoff -a
 
+#Resize the swapfile
+sudo dd if=/dev/zero of=/swapfile bs=9M count=1024
+
+#Make swapfile usable
+sudo mkswap /swapfile
+
+#Make swapon again
+sudo swapon /swapfile
+```

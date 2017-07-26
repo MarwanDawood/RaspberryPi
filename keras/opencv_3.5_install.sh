@@ -15,12 +15,19 @@ if [ "$choice" = "y" ] || [ "$choice" = "Y" ]; then
 git clone https://github.com/opencv/opencv.git
 fi
 
-cd opencv
+cd /home/marwan/Desktop/opencv
 mkdir build
 cd build
 
 #generating native build files (Makefile) for Linux environment with python support and built examples
-cmake -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/usr/local -DBUILD_EXAMPLES=ON -DPYTHON3_EXECUTABLE=/usr/bin/python3.5 -DPYTHON_INCLUDE_DIR=/usr/include/python3.5 -DPYTHON_INCLUDE_DIR2=/usr/include/x86_64-linux-gnu/python3.5m -DPYTHON_LIBRARY=PYTHON_LIBRARY=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/libpython3.5.so -DPYTHON3_NUMPY_INCLUDE_DIR=/usr/lib/python3/dist-packages/numpy/core/include/ ..
+cmake  -DCMAKE_BUILD_TYPE=Release \
+       -DCMAKE_INSTALL_PREFIX=/usr/local \
+       -DBUILD_EXAMPLES=ON \
+       -DPYTHON3_EXECUTABLE=/usr/bin/python3.5 \
+	-DPYTHON_INCLUDE_DIR=/usr/include/python3.5 \
+	-DPYTHON_INCLUDE_DIR2=/usr/include/x86_64-linux-gnu/python3.5m \
+	-DPYTHON_LIBRARY=PYTHON_LIBRARY=/usr/lib/python3.5/config-3.5m-x86_64-linux-gnu/libpython3.5.so \
+	-DPYTHON3_NUMPY_INCLUDE_DIR=/usr/lib/python3/dist-packages/numpy/core/include/ ..
 
 #building directory
 make -j7 # runs 7 jobs in parallel
