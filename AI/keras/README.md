@@ -1,0 +1,2 @@
+# dependecies
+'pip install matplotlib'
