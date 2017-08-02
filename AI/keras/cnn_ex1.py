@@ -22,8 +22,8 @@ X_train = X_train.astype('float32')
 X_test = X_test.astype('float32')
 X_train /= 255
 X_test /= 255
-print X_train.shape
-print y_train.shape
+print (X_train.shape)
+print (y_train.shape)
 
 # 6. Preprocess class labels
 Y_train = np_utils.to_categorical(y_train, 10)
@@ -34,7 +34,7 @@ model = Sequential()
 
 # CNN input layer with 32 filters, each convolutional kernel is 3x3
 model.add(Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)))
-print model.output_shape
+print (model.output_shape)
 
 model.add(Conv2D(32, (3, 3), activation='relu'))
 model.add(MaxPooling2D(pool_size=(2, 2)))
@@ -62,7 +62,7 @@ model.fit(X_train, Y_train,
 
 # 10. Evaluate model on test data
 score = model.evaluate(X_test, Y_test, verbose=0)
-print model.metrics_names[1], score[1]*100
+print (model.metrics_names[1], score[1]*100)
  
 # serialize model to JSON
 model_json = model.to_json()
@@ -70,7 +70,7 @@ with open("model.json", "w") as json_file:
     json_file.write(model_json)
 # serialize weights to HDF5
 model.save_weights("model.h5")
-print "Saved model to disk"
+print ("Saved model to disk")
  
 # later...
  
@@ -81,10 +81,10 @@ json_file.close()
 loaded_model = model_from_json(loaded_model_json)
 # load weights into new model
 loaded_model.load_weights("model.h5")
-print "Loaded model from disk"
+print ("Loaded model from disk")
  
 # evaluate loaded model on test data
 loaded_model.compile(loss='binary_crossentropy', optimizer='rmsprop', metrics=['accuracy'])
 score = loaded_model.evaluate(X_test, Y_test, verbose=0)
-print loaded_model.metrics_names[1], score[1]*100
+print (loaded_model.metrics_names[1], score[1]*100)
 

@@ -10,22 +10,22 @@ workon open_cv_3
 ```
 export WORKON_HOME=~/Envs
 source /home/marwan/.local/bin/virtualenvwrapper.sh 
-mkvirtualenv open_cv_3
-workon open_cv_3
+mkvirtualenv <env>
+workon <env>
 ```
 - - -
 
 # Keras Tensorflow installation for Ubuntu 17.04 (Zesty Zapus)
 
 [Install Keras with Tensorflow complete guide](http://www.pyimagesearch.com/2016/11/14/installing-keras-with-tensorflow-backend/)
-
+Tensorflow requires GPUs of compute capability 3.0 or higher for GPU acceleration and this has been true since the very first release of tensorflow.
 path of Keras installation is `~/Envs/keras_tf/`
 
 ## Running Keras installation scripts for CPU only with virtual environment
 modify first `CURRENT_USER` environment variable then run the following
 ```
-source keras_install_part_1.sh
-source keras_install_part_2.sh
+source keras_virtualenv.sh
+source keras_CPU_only_support.sh
 ```
 
 >after successful installation, try one of Keras examples like `python ~/Envs/keras_tf/keras/examples/addition_rnn.py`, if an error occurred, then try reinstalling tensorflow again through the command `pip install --upgrade tensorflow`
@@ -37,13 +37,7 @@ source opencv_3.5_install.sh
 
 ## Installing tensorflow GPU support in addition to CPU
 ```
-sudo apt-get install libcupti-dev
-pip install --upgrade tensorflow-gpu
-
-sudo apt-get install linux-headers-$(uname -r)
-sudo dpkg -i Downloads/cuda-repo-ubuntu1604_8.0.61-1_amd64.deb
-sudo apt-get update
-sudo apt-get install cuda
+sudo ./keras_GPU_support.sh
 ```
 
 - - - -
