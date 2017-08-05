@@ -9,7 +9,7 @@ git reflog
 git checkout HEAD@{...}
 ```
 
->changing commit before pushing
+>changing commit message before pushing
 ```
 git commit --amend
 ```
