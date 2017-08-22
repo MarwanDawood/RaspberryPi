@@ -4,12 +4,15 @@ This work is built based on [faster RCNN](https://github.com/yhenon/keras-frcnn)
 'pip install matplotlib'
 
 # Preparing the data
-Searching for some test in files in a folder, then extracting this text
-```
+Searching for some text in files in a folder, then extracting this text
+
 #search for a word in files
+```
 ack bus > pos.txt
+```
 #w to search using regex
 #o to output only matching regex pattern
+```
 ack -wo .*\.xml pos.txt > final_pos.txt
 ```
 #search for files

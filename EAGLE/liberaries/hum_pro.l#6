@@ -98,7 +98,6 @@
 <pad name="P$31" x="12.08" y="16.32" drill="0.1" diameter="0.53" shape="long" rot="R90"/>
 <pad name="P$32" x="13.35" y="16.32" drill="0.1" diameter="0.53" shape="long" rot="R90"/>
 <pad name="P$33" x="14.62" y="16.32" drill="0.1" diameter="0.53" shape="long" rot="R90"/>
-<wire x1="0.17" y1="16.48" x2="16.36" y2="16.48" width="0.1" layer="21"/>
 <wire x1="16.36" y1="16.48" x2="16.36" y2="0.17" width="0.1" layer="21"/>
 <wire x1="16.36" y1="0.17" x2="0.17" y2="0.17" width="0.1" layer="21"/>
 <wire x1="0.17" y1="0.17" x2="0.17" y2="16.48" width="0.1" layer="21"/>
@@ -110,50 +109,52 @@
 <circle x="23.36" y="13.91" radius="0.924553125" width="0.1" layer="21"/>
 <pad name="P$34" x="21.54" y="16.12" drill="0.3" diameter="1" shape="square"/>
 <pad name="P$35" x="19.85" y="16.11" drill="0.3" diameter="1" shape="square"/>
+<text x="3.81" y="7.62" size="1.27" layer="21">Hum 900 PRO</text>
 </package>
 </packages>
 <symbols>
 <symbol name="HUMPRO">
 <description>Amplified Hum 900 PRO RF chip manufactured by Linx.</description>
-<pin name="NC@10" x="15.24" y="15.24" length="middle"/>
-<pin name="POWER_DOWN_N" x="15.24" y="12.7" length="middle"/>
-<pin name="NC@11" x="15.24" y="10.16" length="middle"/>
-<pin name="NC@12" x="15.24" y="7.62" length="middle"/>
-<pin name="RESET_N" x="15.24" y="5.08" length="middle"/>
-<pin name="NC@13" x="15.24" y="2.54" length="middle"/>
-<pin name="NC@14" x="15.24" y="0" length="middle"/>
-<pin name="NC@15" x="15.24" y="-2.54" length="middle"/>
-<pin name="MODE_IND" x="15.24" y="-5.08" length="middle"/>
-<pin name="CMD_N" x="15.24" y="-7.62" length="middle"/>
-<pin name="CTS_N" x="15.24" y="-10.16" length="middle"/>
-<pin name="EX" x="-15.24" y="15.24" length="middle" rot="R180"/>
-<pin name="CRESP_N" x="-15.24" y="12.7" length="middle" rot="R180"/>
-<pin name="PB" x="-15.24" y="10.16" length="middle" rot="R180"/>
-<pin name="CMD_DATA_OUT" x="-15.24" y="7.62" length="middle" rot="R180"/>
-<pin name="CMD_DATA_IN" x="-15.24" y="5.08" length="middle" rot="R180"/>
-<pin name="NC@16" x="-15.24" y="2.54" length="middle" rot="R180"/>
-<pin name="NC@17" x="-15.24" y="0" length="middle" rot="R180"/>
-<pin name="NC@18" x="-15.24" y="-2.54" length="middle" rot="R180"/>
-<pin name="NC@19" x="-15.24" y="-5.08" length="middle" rot="R180"/>
-<pin name="NC@20" x="-15.24" y="-7.62" length="middle" rot="R180"/>
-<pin name="NC@1" x="12.7" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@2" x="10.16" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@3" x="7.62" y="17.78" length="middle" rot="R90"/>
-<pin name="BE" x="5.08" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@4" x="2.54" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@5" x="0" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@6" x="-2.54" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@7" x="-5.08" y="17.78" length="middle" rot="R90"/>
-<pin name="GND" x="-7.62" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@8" x="-10.16" y="17.78" length="middle" rot="R90"/>
-<pin name="NC@9" x="-12.7" y="17.78" length="middle" rot="R90"/>
-<wire x1="-15.24" y1="17.78" x2="15.24" y2="17.78" width="0.254" layer="94"/>
-<wire x1="15.24" y1="17.78" x2="15.24" y2="-22.86" width="0.254" layer="94"/>
+<pin name="NC@10" x="20.32" y="15.24" length="middle" rot="R180"/>
+<pin name="POWER_DOWN_N" x="20.32" y="12.7" length="middle" rot="R180"/>
+<pin name="NC@11" x="20.32" y="10.16" length="middle" rot="R180"/>
+<pin name="NC@12" x="20.32" y="7.62" length="middle" rot="R180"/>
+<pin name="RESET_N" x="20.32" y="5.08" length="middle" rot="R180"/>
+<pin name="NC@13" x="20.32" y="2.54" length="middle" rot="R180"/>
+<pin name="NC@14" x="20.32" y="0" length="middle" rot="R180"/>
+<pin name="NC@15" x="20.32" y="-2.54" length="middle" rot="R180"/>
+<pin name="MODE_IND" x="20.32" y="-5.08" length="middle" rot="R180"/>
+<pin name="CMD_N" x="20.32" y="-7.62" length="middle" rot="R180"/>
+<pin name="CTS_N" x="20.32" y="-10.16" length="middle" rot="R180"/>
+<pin name="EX" x="-20.32" y="15.24" length="middle"/>
+<pin name="CRESP_N" x="-20.32" y="12.7" length="middle"/>
+<pin name="PB" x="-20.32" y="10.16" length="middle"/>
+<pin name="CMD_DATA_OUT" x="-20.32" y="7.62" length="middle"/>
+<pin name="CMD_DATA_IN" x="-20.32" y="5.08" length="middle"/>
+<pin name="NC@16" x="-20.32" y="2.54" length="middle"/>
+<pin name="NC@17" x="-20.32" y="0" length="middle"/>
+<pin name="NC@18" x="-20.32" y="-2.54" length="middle"/>
+<pin name="NC@19" x="-20.32" y="-5.08" length="middle"/>
+<pin name="NC@20" x="-20.32" y="-7.62" length="middle"/>
+<pin name="NC@1" x="12.7" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@2" x="10.16" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@3" x="7.62" y="30.48" length="middle" rot="R270"/>
+<pin name="BE" x="5.08" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@4" x="2.54" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@5" x="0" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@6" x="-2.54" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@7" x="-5.08" y="30.48" length="middle" rot="R270"/>
+<pin name="GND" x="-7.62" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@8" x="-10.16" y="30.48" length="middle" rot="R270"/>
+<pin name="NC@9" x="-12.7" y="30.48" length="middle" rot="R270"/>
+<wire x1="-15.24" y1="25.4" x2="15.24" y2="25.4" width="0.254" layer="94"/>
+<wire x1="15.24" y1="25.4" x2="15.24" y2="-22.86" width="0.254" layer="94"/>
 <wire x1="15.24" y1="-22.86" x2="-15.24" y2="-22.86" width="0.254" layer="94"/>
-<wire x1="-15.24" y1="-22.86" x2="-15.24" y2="17.78" width="0.254" layer="94"/>
-<text x="-7.62" y="0" size="1.778" layer="94">   Amplified 
-Hum 900 PRO</text>
-<pin name="VCC" x="-15.24" y="-10.16" length="middle" rot="R180"/>
+<wire x1="-15.24" y1="-22.86" x2="-15.24" y2="25.4" width="0.254" layer="94"/>
+<pin name="VCC" x="-20.32" y="-10.16" length="middle"/>
+<pin name="ANT" x="20.32" y="-17.78" length="middle" rot="R180"/>
+<pin name="GND_ANT" x="20.32" y="-20.32" length="middle" rot="R180"/>
+<text x="-15.24" y="-25.4" size="1.778" layer="94">Amplified Hum 900 PRO</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -164,41 +165,6 @@ Hum 900 PRO</text>
 </gates>
 <devices>
 <device name="" package="HUM_PRO">
-<connects>
-<connect gate="G$1" pin="BE" pad="P$15"/>
-<connect gate="G$1" pin="CMD_DATA_IN" pad="P$5"/>
-<connect gate="G$1" pin="CMD_DATA_OUT" pad="P$4"/>
-<connect gate="G$1" pin="CMD_N" pad="P$32"/>
-<connect gate="G$1" pin="CRESP_N" pad="P$2"/>
-<connect gate="G$1" pin="CTS_N" pad="P$33"/>
-<connect gate="G$1" pin="EX" pad="P$1"/>
-<connect gate="G$1" pin="GND" pad="P$20"/>
-<connect gate="G$1" pin="MODE_IND" pad="P$31"/>
-<connect gate="G$1" pin="NC@1" pad="P$12"/>
-<connect gate="G$1" pin="NC@10" pad="P$23"/>
-<connect gate="G$1" pin="NC@11" pad="P$25"/>
-<connect gate="G$1" pin="NC@12" pad="P$26"/>
-<connect gate="G$1" pin="NC@13" pad="P$28"/>
-<connect gate="G$1" pin="NC@14" pad="P$29"/>
-<connect gate="G$1" pin="NC@15" pad="P$30"/>
-<connect gate="G$1" pin="NC@16" pad="P$6"/>
-<connect gate="G$1" pin="NC@17" pad="P$7"/>
-<connect gate="G$1" pin="NC@18" pad="P$8"/>
-<connect gate="G$1" pin="NC@19" pad="P$9"/>
-<connect gate="G$1" pin="NC@2" pad="P$13"/>
-<connect gate="G$1" pin="NC@20" pad="P$10"/>
-<connect gate="G$1" pin="NC@3" pad="P$14"/>
-<connect gate="G$1" pin="NC@4" pad="P$16"/>
-<connect gate="G$1" pin="NC@5" pad="P$17"/>
-<connect gate="G$1" pin="NC@6" pad="P$18"/>
-<connect gate="G$1" pin="NC@7" pad="P$19"/>
-<connect gate="G$1" pin="NC@8" pad="P$21"/>
-<connect gate="G$1" pin="NC@9" pad="P$22"/>
-<connect gate="G$1" pin="PB" pad="P$3"/>
-<connect gate="G$1" pin="POWER_DOWN_N" pad="P$24"/>
-<connect gate="G$1" pin="RESET_N" pad="P$27"/>
-<connect gate="G$1" pin="VCC" pad="P$11"/>
-</connects>
 <technologies>
 <technology name=""/>
 </technologies>
@@ -208,10 +174,4 @@ Hum 900 PRO</text>
 </devicesets>
 </library>
 </drawing>
-<compatibility>
-<note version="6.3" minversion="6.2.2" severity="warning">
-Since Version 6.2.2 text objects can contain more than one line,
-which will not be processed correctly with this version.
-</note>
-</compatibility>
 </eagle>
