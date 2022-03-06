@@ -1,6 +1,6 @@
-## LIRC (Linux Infrared Remote Control)
+## [LIRC (Linux Infrared Remote Control)](https://www.lirc.org/)
 
-Refer to this [topic](https://www.instructables.com/Install-and-Configure-Linux-Infrared-Remote-Contro/) for more information.
+This work is based on this [topic](https://www.instructables.com/Install-and-Configure-Linux-Infrared-Remote-Contro/) for more information.
 This device runs on Raspberry-Pi.
 
 1. Intsall LIRC package
@@ -44,15 +44,6 @@ echo "dtoverlay=lirc-rpi" >>/boot/config.txt
 echo "lirc_dev" >>/etc/modules
 echo "lirc_rpi gpio_in_pin=18 gpio_out_pin=22" >>/etc/modules
 ```
-5. mode2 to get device info
-```
-mode2 -d /dev/lirc0
-```
-6. To stop the service
-```
-/etc/init.d/lirc stop
-```
-7. restart lirc service
-```
-/etc/init.d/lirc restart
-```
+5. mode2 to get device info `mode2 -d /dev/lirc0`
+6. To stop the service `/etc/init.d/lirc stop`
+7. restart lirc service `/etc/init.d/lirc restart`
