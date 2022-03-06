@@ -1,12 +1,12 @@
 ## AVR Timer
-The timer in AVR can be calculated as below (in milliseconds):
-**Timer_Count = (Required_Delay_in / Clock_Time_period) - 1**
+The timer in AVR can be calculated as below (in milliseconds): \
+>**Timer_Count = (Required_Delay_in / Clock_Time_period) - 1** \
 [Online timer calculator](http://eleccelerator.com/avr-timer-calculator/)
 
 Therefore for a crystal of 4MHz, we get only a maximum delay of 16.384 ms! Thus to overcome this, we use prescalers in TCCR1B register.
 
 More references
-http://maxembedded.com/2011/07/avr-timers-ctc-mode/\
+http://maxembedded.com/2011/07/avr-timers-ctc-mode/ \
 http://maxembedded.com/2011/06/introduction-to-avr-timers/
 
 ## install avrdude as a package
