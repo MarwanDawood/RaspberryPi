@@ -3,16 +3,16 @@ sudo apt-get update
 sudo apt-get upgrade
 
 sudo apt-get install bison flex libusb-dev
-cd /tmp
-wget http://download.savannah.gnu.org/releases/avrdude/avrdude-6.1.tar.gz
+wget http://download.savannah.gnu.org/releases/avrdude/avrdude-6.1.tar.gz -P /tmp
 tar xf avrdude-6.1.tar.gz
-cd avrdude-6.1
+pushd /tmp/avrdude-6.1
 ./configure --prefix=/opt/avrdude --enable-linuxgpio
 make
 sudo make install
-cp /etc/avrdude.conf ~/avrdude_gpio.conf
+popd
+cp /tmp/avrdude-6.1/avrdude.conf avrdude_gpio.conf
 
-#installing the gcc compiler
+#installing the gcc compiler for AVR uC
 sudo apt-get install gcc-avr binutils-avr avr-libc
 
 #for in-system debugging/emulation.
